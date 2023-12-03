@@ -48,7 +48,11 @@ class PostCubit extends Cubit<PostState> {
       'userId' : 2222,
       'title':'koko',
       'body':'kawthar alshab'
-    } );
+    },options: Options(
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded'
+      }
+    ) );
     var responseData = response.data;
     print(responseData.toString());
 
